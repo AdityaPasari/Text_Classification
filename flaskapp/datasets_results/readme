@@ -1,1 +1,4 @@
-.
+results_size only contain results about accuracy, confidence, confusion matrix and classification report.
+
+
+prediction_results_size also contains label of each document.

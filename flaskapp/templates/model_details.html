@@ -12,7 +12,7 @@
         <p>
 
           <b>Model Details:</b><br>
-          Since machine learning requires attributes for predictions, and text is just raw data without any features,
+          Since machine learning requires features for predictions, and text is just raw data without any features,
           the first step is to obtain features from raw documents. <br> <br>
 
             Bag of Words model was used to count the frequency of each words in the data. <br>
@@ -23,13 +23,13 @@
 
             Lots of models like Bayesian (Multinomial Naive Bayes) as well as Tree Based (Random Forest, Adaboost, Bagging) etc were tried at first.
             Also, some efforts were spent on creating some kind of ensemble method using different predictors.
-            But all these models proved inferior to Support Vector Machine and Logistic Regression. This was also indicated in literature.<br>
+            But all these models proved inferior to Support Vector Machine and Logistic Regression. This was also stated in literature.<br>
             As the problem specification wanted probability too, logistic regression was chosen as the final model. <br><br>
 
-            Dataset was divided into 75% training data and 25% test data. Cross-validation was performed to find the best parameters. The parameters were:
+            Dataset was divided into 75% training data and 25% test data. Cross-validation was performed to find the best hyperparameters. The hyperparameters were:
             <li>Learning rate - It affects the speed of gradient descent.</li>
             <li>Penalty term - L1 / L2 </li>
-            <li>tf-idf - Whether to use this or not. </li>
+            <li>tf-idf - Whether to use tf-idf or not. </li>
             <li>Max Features - Max number of features to consider while training model.</li>
             <li>n-gram - 1-gram and 2-gram were considered. 3-gram caused memory error.</li>
             <li>Max Document Frequency - It was thought that words appearing in all/majority documents are useless.</li> <br>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <header>
+
+  </header>
+  <style>
+    body {
+      background-color:lightblue;
+      }
+  </style>
+      <body>
+        <p>
+
+          <b>Model Details:</b><br>
+          Since machine learning requires attributes for predictions, and text is just raw data without any features,
+          the first step is to obtain features from raw documents. <br> <br>
+
+            Bag of Words model was used to count the frequency of each words in the data. <br>
+            Then, term frequency-inverse document frequency (tf-idf) was computed from bag of words representation.
+            Though we want high frequency words to correctly classify our document, we don't want such words which are present in each kind of document.
+            Thus, tf-idf achieves this by weighing words higher which only appear in certain type of documents. <br>
+            Thus, we converted raw document to some kind of feature vector which can be used to make some kind of prediction. <br><br>
+
+            Lots of models like Bayesian (Multinomial Naive Bayes) as well as Tree Based (Random Forest, Adaboost, Bagging) etc were tried at first.
+            Also, some efforts were spent on creating some kind of ensemble method using different predictors.
+            But all these models proved inferior to Support Vector Machine and Logistic Regression. This was also indicated in literature.<br>
+            As the problem specification wanted probability too, logistic regression was chosen as the final model. <br><br>
+
+            Dataset was divided into 75% training data and 25% test data. Cross-validation was performed to find the best parameters. The parameters were:
+            <li>Learning rate - It affects the speed of gradient descent.</li>
+            <li>Penalty term - L1 / L2 </li>
+            <li>tf-idf - Whether to use this or not. </li>
+            <li>Max Features - Max number of features to consider while training model.</li>
+            <li>n-gram - 1-gram and 2-gram were considered. 3-gram caused memory error.</li>
+            <li>Max Document Frequency - It was thought that words appearing in all/majority documents are useless.</li> <br>
+            After, performing gridsearch cross-validation, the best paramters were chosen.
+          <br><br> <br>
+
+          <b>What else could have been done:</b><br>
+          Since the data was already provided in some transformed type, not much was done on the pre-processing of the dataset.
+          It was assumed that such steps were already taken before transforming it. Steps like removing stopwords from the dataset are useful.
+          Stopwords add no value and increase the dimensionality. Some advanced methods could also have been used, but since data was not readable by human,
+          they weren't used. <br> <br>
+          Also, some classes were skewed. Performance measure usually depends on domain and what we are trying to achieve. But, no information regarding
+          type of performance required was provided. Thus, multiclass prediction accuracy was chosen as the performance measure. If some documents are more
+          important than others, or some other information is available, then it can be incorporated in the model.
+        </p>
+
+      </body>
+
+</html>

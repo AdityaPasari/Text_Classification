@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>How to use</title>
+  <header> </header>
+  <style>
+    body {
+      background-color:powderblue;
+      }
+  </style>
+  <body>
+        <p>
+          Use parameter word= "document". Returns a json object containing prediction and confidence. <br>
+          For multiple documents, separate each document by comma. It returns a list of predictions and confidence. <br>
+          Same can be achieved  <a href="{{ url_for('predict_output') }}"><b>Here</b></a>. Just post your documents on new line or upload a file <br><br>
+
+          To check the performance/accuracy of this model versus your model, go <a href="{{ url_for('predict_accuracy') }}"><b>Here</b></a>. <br>
+          It returns predictions, accuracy, confusion matrix and classification report. <br><br>
+
+          To get some dataset for your model, go  <a href="{{ url_for('check_your_model') }}"><b>Here</b></a>. <br>
+          Accuracy for each dataset is given. For more comprehensive results, run the datasets on link above and check.
+        </p>
+  </body>
+</html>

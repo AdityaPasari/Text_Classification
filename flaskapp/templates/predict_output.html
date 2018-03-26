@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <header>
+      <title>Predict Output</title>
+    </header>
+  <style>
+    body {
+      background-color:powderblue;
+    }
+  </style>
+  <body>
+    <p> Enter the document you want to predict. <br>
+        Multiple documents should be on a new line. <br>
+        Only submit documents without labels. The output will be predicted labels by the model.
+    </p>
+    <form method="POST">
+      <textarea name="document" cols="75" rows="25"></textarea><br>
+      <input type="submit">  <br> <br>
+      <a href="{{ url_for('uploaded_predict_output') }}">Instead upload a file ? </a>
+    </form>
+  </body>
+</html>

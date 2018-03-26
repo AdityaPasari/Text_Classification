@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+      <title> Predict Accuracy</title>
+    </header>
+    <style>
+      body {
+      background-color:powderblue;
+      }
+    </style>
+
+      <body>
+        <p> Enter the contents of document. <br>
+            It should be of the form - True Label, document. <br>
+            Each document should be on a new line without blank line in between <br>
+            The output will be our model predictions along with accuracy.
+        </p>
+
+        <form method="POST">
+        <input type="checkbox" name="view_results" > Want to see model predictions ? <br>
+          <textarea name="document" cols="100" rows="25"></textarea> <br>
+          <input type="submit"> <br><br>
+          <a href="{{ url_for('uploaded_predict_accuracy')}}" method="POST">Instead upload a file ? </a>
+        </form>
+      </body>
+</html>

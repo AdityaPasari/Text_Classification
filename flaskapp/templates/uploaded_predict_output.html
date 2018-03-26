@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+    <style>
+  body {
+    background-color:powderblue;
+  }
+  </style>
+
+      <form id= "upload-form" action = "{{url_for('uploaded_predict_output')}}" method = "POST" enctype= "multipart/form-data">
+        <input type="file" name="newfile"><br>
+         <input type="submit" value="Submit">
+         </form>
+  </header>
+  </body>
+</html>

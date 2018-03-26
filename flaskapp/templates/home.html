@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+    <style>
+body {
+  background-color:powderblue;
+}
+
+h1.logo{
+  color:red;
+  text-align: center;
+}
+
+</style>
+      <h1 class="logo">Machine Learning for Text Classification</h1>
+        <strong><nav>
+           <ul class="menu">
+             <li><a href="{{ url_for('predict_output') }}">Predict document type for your dataset</a></li><br>
+             <li><a href="{{ url_for('predict_accuracy') }}">Check accuracy of our model with yours</a></li><br>
+            <li><a href="{{ url_for('check_your_model') }}">Test on some datasets?</a></li><br>
+              <li><a href="{{ url_for('model_details') }}">Model details</a></li><br>
+              <li><a href="{{ url_for('manual') }}">How to use</a></li><br>
+           </ul>
+</form>
+    </nav></strong>
+    </header>
+  </body>
+</html>

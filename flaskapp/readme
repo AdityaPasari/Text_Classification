@@ -1,0 +1,3 @@
+serverfile.py is for flask application.
+
+text_classification_model.py is the machine learning model.
